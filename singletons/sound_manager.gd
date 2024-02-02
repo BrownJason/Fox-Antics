@@ -31,6 +31,8 @@ var SOUNDS = {
 	SOUND_WIN: preload("res://assets/sound/you_win.ogg")
 }
 
+func _ready():
+	AudioServer.set_bus_volume_db(0, -10)
 
 func play_clip(player: AudioStreamPlayer2D, clip_key: String):
 	if SOUNDS.has(clip_key) == false:
